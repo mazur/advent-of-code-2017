@@ -13,7 +13,6 @@ lengths = lengths*64
 pos = 0
 pc = 0
 
-# Run 64 times
 while !lengths.empty? do
   l = lengths.shift
   s = []
@@ -27,9 +26,6 @@ while !lengths.empty? do
   for i in 0..l-1
     list[(pos+i)%list.length] = s[i]
   end
-
-  #p l
-  #p list
 
   pos = pos + l + pc
   pc += 1
